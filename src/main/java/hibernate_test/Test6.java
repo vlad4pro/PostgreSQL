@@ -19,6 +19,10 @@ public class Test6 {
 
             session.createQuery("update Employee set salary = 2000 where first_name ='Vladimir'");
 
+            session.createQuery("delete Employee where first_name ='ALexand'");
+
+            session.createQuery("delete Employee where first_name ='ALexand'");
+
             session.getTransaction().commit();
             System.out.println("Done !!!");
 

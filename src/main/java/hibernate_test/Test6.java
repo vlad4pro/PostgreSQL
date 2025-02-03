@@ -12,20 +12,26 @@ public class Test6 {
 
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class).buildSessionFactory();
+        try {
+            Session session = factory.getCurrentSession();
+            session.beginTransaction();
 
-        Session session = factory.getCurrentSession();
-        session.beginTransaction();
 
+            session.createQuery("update Employee set salary = 2000 where first_name ='Vladimir'");
 
-        session.createQuery("update Employee set salary = 2000 where first_name ='Vladimir'");
+            session.getTransaction().commit();
+            System.out.println("Done !!!");
 
-        session.getTransaction().commit();
-        System.out.println("Done !!!");
+        } finally {
+
+            factory.close();
+        }
 
     }
 
-
 }
+
+
 
 
 

@@ -17,5 +17,15 @@ public class Test6 {
         session.beginTransaction();
 
 
+        session.createQuery("update Employee set salary = 2000 where first_name ='Vladimir'");
+
+        session.getTransaction().commit();
+        System.out.println("Done !!!");
+
     }
+
+
 }
+
+
+

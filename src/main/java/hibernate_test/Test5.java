@@ -22,6 +22,8 @@ public class Test5 {
 
             session.createQuery("delete Employee where first_name='Elena'").executeUpdate();
 
+            session.createQuery("delete Employee where last_name='Patrick'").executeUpdate();
+
             session.getTransaction().commit();
             System.out.println("This is done !!!");
 

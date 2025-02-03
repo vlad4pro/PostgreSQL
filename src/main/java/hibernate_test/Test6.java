@@ -22,6 +22,8 @@ public class Test6 {
             session.getTransaction().commit();
             System.out.println("Done !!!");
 
+            System.out.println("Ich find dich schaisse !!! Schaissegal");
+
         } finally {
 
             factory.close();

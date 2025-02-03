@@ -22,6 +22,10 @@ public class Test6 {
             session.getTransaction().commit();
             System.out.println("Done !!!");
 
+            System.out.println("Add new employee for GitTest");
+
+            System.out.println("Add new employee for GitTest2");
+
         } finally {
 
             factory.close();
